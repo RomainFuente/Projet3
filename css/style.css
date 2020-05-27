@@ -1,12 +1,9 @@
+@charset "UTF-8";
 @keyframes soon {
   0% {
-    transform: skew(30deg);
     opacity: 0; }
-  50% {
-    opacity: 1; }
   100% {
-    transform: skew(-30deg);
-    opacity: 0; } }
+    opacity: 1; } }
 @keyframes wiggle {
   0% {
     transform: translateX(0); }
@@ -120,33 +117,34 @@ body {
     body #bloc-page .soon {
       display: flex;
       justify-content: center;
-      padding: 25px;
-      overflow: hidden; }
-      body #bloc-page .soon::before, body #bloc-page .soon::after {
-        content: "!!!";
+      overflow: hidden;
+      position: relative;
+      left: 20px; }
+      body #bloc-page .soon p {
         display: block;
-        width: 150px;
-        height: 120px;
         position: relative;
-        text-align: center;
         font-size: 3em;
-        color: #fdcb46; }
-      body #bloc-page .soon::after {
-        transform-origin: left;
+        left: -50px;
+        top: -55px;
+        color: #fdcb46;
+        cursor: pointer; }
+      body #bloc-page .soon .anim-soon-btn-1 {
         animation: soon 1.6s 150ms ease-in-out infinite alternate; }
-      body #bloc-page .soon::before {
-        transform-origin: right;
-        animation: soon 1.6s 150ms ease-in-out infinite alternate-reverse; }
+      body #bloc-page .soon .anim-soon-btn-2 {
+        animation: soon 1.6s 650ms ease-in-out infinite alternate; }
+      body #bloc-page .soon .anim-soon-btn-3 {
+        animation: soon 1.6s 1050ms ease-in-out infinite alternate; }
       body #bloc-page .soon__btn {
         height: 50px;
-        width: 320px;
+        width: 280px;
         font-size: 2em;
         color: #fdcb46;
         background-color: #579c87;
         border-radius: 10px;
         border: none;
         transition: 350ms 150ms ease-in-out;
-        cursor: pointer; }
+        cursor: pointer;
+        text-align: start; }
         body #bloc-page .soon__btn:hover {
           background: #95c4b6;
           color: #fcbd14; }
@@ -203,6 +201,8 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 2.3em;
     color: black; }
+    .note-page main h2, .delice-page main h2, .palette-page main h2, .chic-page main h2 {
+      text-align: center; }
     .note-page main .menu, .delice-page main .menu, .palette-page main .menu, .chic-page main .menu {
       display: flex;
       flex-direction: column;
@@ -249,6 +249,8 @@ body {
           display: flex;
           justify-content: space-between; }
         .note-page main .menu section .price, .delice-page main .menu section .price, .palette-page main .menu section .price, .chic-page main .menu section .price {
+          display: flex;
+          align-items: center;
           font-weight: 900; }
 
 /* Menu la note page */
@@ -277,6 +279,20 @@ body {
   .note-menu .title-top h2 {
     margin-top: 0; }
 
+/* Responsive menu La note 750px */
+@media all and (max-width: 750px) {
+  .note-page .note-menu h2 {
+    font-size: 1.2em; }
+  .note-page .note-menu .submenu-title {
+    width: 30%;
+    text-align: center; }
+  .note-page .note-menu h3 {
+    font-size: 0.7em;
+    margin: 0; }
+  .note-page .note-menu p {
+    font-size: 0.6em; }
+  .note-page .note-menu .title-top h2, .note-page .note-menu .title-bottom h2 {
+    margin-top: 0; } }
 /* Menu le chic page */
 .chic-menu {
   background-color: #fff5fe;
@@ -310,6 +326,14 @@ body {
   .chic-menu .title-bottom h2 {
     font-size: 0.9em; }
 
+/* Responsive menu Le chic 750px */
+@media all and (max-width: 750px) {
+  .chic-menu h2 {
+    font-size: 0.8em; }
+  .chic-menu h3 {
+    font-size: 0.5em; }
+  .chic-menu .title-bottom h2 {
+    font-size: 0.7em; } }
 /* Menu le delice page */
 .delice-menu {
   background-color: #f7f7f7;
@@ -351,6 +375,16 @@ body {
     .delice-menu .title-bottom h2 {
       font-size: 1.5em; }
 
+/* Responsive menu Le délice 750px */
+@media all and (max-width: 750px) {
+  .delice-menu h2 {
+    font-size: 1.2em; }
+  .delice-menu h3 {
+    font-size: 0.8em; }
+  .delice-menu p {
+    font-size: 0.7em; }
+  .delice-menu .title-bottom h2 {
+    font-size: 1em; } }
 /* Menu la palette page */
 .palette-menu {
   background-color: #f7f7f7;
@@ -386,6 +420,18 @@ body {
     .palette-menu .title-bottom h2 {
       font-size: 1.5em; }
 
+/* Responsive menu La palette 750px */
+@media all and (max-width: 750px) {
+  .palette-menu section .title .submenu-title {
+    width: 60%; }
+  .palette-menu h2 {
+    font-size: 1.2em; }
+  .palette-menu h3 {
+    font-size: 0.7em; }
+  .palette-menu p {
+    font-size: 0.6em; }
+  .palette-menu .title-bottom h2 {
+    font-size: 1em; } }
 /* Responsive acceuil 1200px */
 @media all and (max-width: 1200px) {
   #bloc-page .accueil__section {
@@ -403,13 +449,6 @@ body {
     overflow-x: hidden; }
     body #bloc-page footer a, body .bloc-page footer a {
       font-size: 1.1em; }
-    body #bloc-page .soon::after, body .bloc-page .soon::after {
-      width: 70px; }
-    body #bloc-page .soon::before, body .bloc-page .soon::before {
-      width: 70px; }
-    body #bloc-page .soon__btn, body .bloc-page .soon__btn {
-      width: 200px;
-      font-size: 1.5em; }
     body #bloc-page .accueil div, body .bloc-page .accueil div {
       flex-direction: column;
       margin-bottom: 0; }
@@ -419,15 +458,30 @@ body {
       margin: 0 0 30px 0; } }
 /* Responsive base menu 1050px */
 @media all and (max-width: 1050px) {
-  .note-page main, .delice-page main, .palette-page main, .chic-page main {
-    font-size: 2em; }
-    .note-page main .menu, .delice-page main .menu, .palette-page main .menu, .chic-page main .menu {
-      width: 100%; }
-      .note-page main .menu .title-top, .delice-page main .menu .title-top, .palette-page main .menu .title-top, .chic-page main .menu .title-top {
-        margin: 0; }
-        .note-page main .menu .title-top img, .delice-page main .menu .title-top img, .palette-page main .menu .title-top img, .chic-page main .menu .title-top img {
-          width: 100px; }
-      .note-page main .menu section .price, .delice-page main .menu section .price, .palette-page main .menu section .price, .chic-page main .menu section .price {
-        margin-left: 20px; }
-      .note-page main .menu section .title, .delice-page main .menu section .title, .palette-page main .menu section .title, .chic-page main .menu section .title {
-        width: 95%; } }
+  .note-page main .menu, .delice-page main .menu, .palette-page main .menu, .chic-page main .menu {
+    width: 100%; }
+    .note-page main .menu .title-top, .delice-page main .menu .title-top, .palette-page main .menu .title-top, .chic-page main .menu .title-top {
+      margin: 0; }
+      .note-page main .menu .title-top img, .delice-page main .menu .title-top img, .palette-page main .menu .title-top img, .chic-page main .menu .title-top img {
+        width: 100px; }
+    .note-page main .menu section .price, .delice-page main .menu section .price, .palette-page main .menu section .price, .chic-page main .menu section .price {
+      margin-left: 20px; }
+    .note-page main .menu section .title, .delice-page main .menu section .title, .palette-page main .menu section .title, .chic-page main .menu section .title {
+      width: 95%; } }
+/* Responsive base menu 750px */
+@media all and (max-width: 750px) {
+  .note-page .main-title, .delice-page .main-title, .palette-page .main-title, .chic-page .main-title {
+    font-size: 1em; }
+  .note-page main .menu, .delice-page main .menu, .palette-page main .menu, .chic-page main .menu {
+    width: 100%; }
+    .note-page main .menu .title-top, .delice-page main .menu .title-top, .palette-page main .menu .title-top, .chic-page main .menu .title-top {
+      margin: 0; }
+    .note-page main .menu .title-bottom, .delice-page main .menu .title-bottom, .palette-page main .menu .title-bottom, .chic-page main .menu .title-bottom {
+      flex-direction: column;
+      align-items: center; }
+    .note-page main .menu section .price, .delice-page main .menu section .price, .palette-page main .menu section .price, .chic-page main .menu section .price {
+      margin-left: 20px; }
+    .note-page main .menu section .title, .delice-page main .menu section .title, .palette-page main .menu section .title, .chic-page main .menu section .title {
+      width: 95%; }
+    .note-page main .menu section ul, .delice-page main .menu section ul, .palette-page main .menu section ul, .chic-page main .menu section ul {
+      margin: 0; } }

@@ -18,15 +18,10 @@ $font-color-palette-desserts:#beff7f;
 
 @keyframes soon {
 	0% {
-		transform: skew(30deg,);
 		opacity: 0;
-	}
-	50%{
-		opacity: 1;
 	}
 	100% {
-		transform: skew(-30deg,);
-		opacity: 0;
+		opacity: 1;
 	}
 }
 @keyframes wiggle {
@@ -164,29 +159,30 @@ body{
 		.soon{
 			display: flex;
 			justify-content: center;
-			padding: 25px;
 			overflow: hidden;
-			&::before, &::after{
-					content: "!!!";
+			position: relative;
+			left: 20px;
+				p{
 					display: block;
-					width: 150px;
-					height: 120px;
 					position: relative;
-					text-align: center;
 					font-size: 3em;
-					color: $main-font-color;	
-					}
-				 &::after{
-				 	transform-origin: left;
-				 	animation: soon 1.6s 150ms ease-in-out infinite alternate;
-					 }
-				 &::before{
-				 	transform-origin: right;
-				 	animation: soon 1.6s 150ms ease-in-out infinite alternate-reverse;
-					 }
+					left: -50px;
+					top: -55px;
+					color: $main-font-color;
+					cursor: pointer;
+				}
+				.anim-soon-btn-1{
+					animation: soon 1.6s 150ms ease-in-out infinite alternate;
+				}
+				.anim-soon-btn-2{
+					animation: soon 1.6s 650ms ease-in-out infinite alternate;
+				}
+				.anim-soon-btn-3{
+					animation: soon 1.6s 1050ms ease-in-out infinite alternate;
+				}
 			&__btn{
 				height: 50px;
-				width: 320px;
+				width: 280px;
 				font-size: 2em;
 				color: $main-font-color;
 				background-color: $primary-color;
@@ -194,13 +190,14 @@ body{
 				border: none;
 				transition: 350ms 150ms ease-in-out;
 				cursor: pointer;
+				text-align: start;
 				&:hover{
 					background: lighten($primary-color, 20);
 					color: darken($main-font-color, 10);
 					}
 				}
 			}
-			}
+		}
 	header, footer{
 		width: 100%;
 		background-color: $primary-color;
@@ -264,6 +261,9 @@ body{
 			font-family: 'Roboto', sans-serif;
 			font-size: 2.3em;
 			color: black;
+			h2{
+				text-align: center;
+			}
 			.menu{
 				display: flex;
 				flex-direction: column;
@@ -324,6 +324,8 @@ body{
 							justify-content: space-between;
 						}
 						.price{
+							display: flex;
+							align-items: center;
 							font-weight: 900;
 						}
 
@@ -367,6 +369,34 @@ body{
 		.title-top h2{
 			margin-top: 0;
 		}
+}
+
+
+/* Responsive menu La note 750px *////////////////////////////////////////////////
+
+@media all and (max-width: 750px)
+{
+	.note-page{
+		.note-menu{
+			h2{
+				font-size: 1.2em;
+			}
+			.submenu-title{
+				width: 30%;
+				text-align: center;
+			}
+			h3{
+				font-size: 0.7em;
+				margin: 0;
+			}
+			p{
+				font-size: 0.6em;
+			}
+			.title-top h2, .title-bottom h2{
+				margin-top: 0;
+			}
+		}
+	}	
 }
 
 
@@ -416,7 +446,22 @@ body{
 			font-size: 0.9em;
 		}
 }
+/* Responsive menu Le chic 750px *////////////////////////////////////////////////
 
+@media all and (max-width: 750px)
+{
+	.chic-menu{
+		h2{
+			font-size: 0.8em;
+		}
+		h3{
+			font-size: 0.5em;
+		}
+		.title-bottom h2{
+			font-size: 0.7em;
+		}
+	}
+}
 
 /* Menu le delice page *////////////////////////////////////////////////
 
@@ -475,6 +520,27 @@ body{
 		}
 }
 
+/* Responsive menu Le délice 750px *////////////////////////////////////////////////
+
+@media all and (max-width: 750px)
+{
+	.delice-menu{
+			h2{
+				font-size: 1.2em;
+			}
+			h3{
+				font-size: 0.8em;
+			}
+			p{
+				font-size: 0.7em;
+			}
+			.title-bottom {
+				h2{
+				font-size: 1em;
+				}
+			}
+	}	
+}
 
 /* Menu la palette page *////////////////////////////////////////////////
 
@@ -525,7 +591,31 @@ body{
 			}
 		}
 }
+/* Responsive menu La palette 750px *////////////////////////////////////////////////
 
+@media all and (max-width: 750px)
+{
+	.palette-menu{
+			section .title .submenu-title{
+				width: 60%;
+			}
+			h2{
+				font-size: 1.2em;
+			}
+			h3{
+				font-size: 0.7em;
+			}
+			p{
+				font-size: 0.6em;
+			}
+			.title-bottom {
+				h2{
+				font-size: 1em;
+				}
+			}
+	}
+
+}
 
 /* Responsive acceuil 1200px *////////////////////////////////////////////////
 
@@ -560,18 +650,6 @@ body{
 			footer a{
 				font-size: 1.1em;
 			}
-			.soon{
-				&::after{
-				width: 70px
-				}
-				&::before {
-				width: 70px
-				}
-				&__btn{
-					width: 200px;
-					font-size: 1.5em;
-				}
-			}
 			.accueil div{
 				flex-direction: column;
 				margin-bottom: 0;
@@ -592,7 +670,6 @@ body{
 {
 	.note-page, .delice-page, .palette-page, .chic-page{
 		main{
-			font-size: 2em;
 			.menu{
 				width: 100%;
 				.title-top{
@@ -608,6 +685,41 @@ body{
 					.title{
 						width: 95%;
 					}
+				}
+			}
+		}
+	}
+} 
+
+/* Responsive base menu 750px *////////////////////////////////////////////////
+
+@media all and (max-width: 750px)
+{
+	.note-page, .delice-page, .palette-page, .chic-page{
+		.main-title{
+			font-size: 1em;
+		}
+		main{
+			.menu{
+				width: 100%;
+				.title-top{
+					margin: 0;
+				}
+				.title-bottom{
+					flex-direction: column;
+					align-items: center;
+				}
+				section{
+					.price{
+						margin-left: 20px;
+					}
+					.title{
+						width: 95%;
+					}
+					ul{
+						margin: 0;
+					}
+
 				}
 			}
 		}
