@@ -1,0 +1,615 @@
+$primary-color :#579c87;
+$main-font-color:#fdcb46;
+$shadow-color:#b8b8b8;
+$back-note-color: #fcdfdb;
+$font-color-note:#3c1218;
+$back-chic-color:#fff5fe;
+$font-color-chic-entrees:#c67412;
+$font-color-chic-plats:#a56799;
+$font-color-chic-desserts:#6e4ccc;
+$back-delice-color:#f7f7f7;
+$font-color-delice-entrees:#0228dd;
+$font-color-delice-plats:#0670f3;
+$font-color-delice-desserts:#229df9;
+$back-palette-color:#fdfffd;
+$font-color-palette-entrees:#489b40;
+$font-color-palette-plats:#90d867;
+$font-color-palette-desserts:#beff7f;
+
+@keyframes soon {
+	0% {
+		transform: skew(30deg,);
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100% {
+		transform: skew(-30deg,);
+		opacity: 0;
+	}
+}
+@keyframes wiggle {
+    0% { transform: translateX(0); }
+   33% { transform: translateX(7px); }
+   66% { transform: translateX(-7px); }
+  100% { transform: translateX(0); }
+}
+
+body{
+	width: 100%;
+	margin: 190px 0 30px 0;
+	#bloc-page{
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			main{
+				width: 100%;
+				min-height: 100%;
+				display: flex;
+				flex-direction: column;
+				div{
+					display: flex;
+					justify-content: center;
+					margin-bottom: 70px;
+					section{
+						width: 28%;
+						overflow: hidden;
+						margin: 0 35px 0 35px;
+						position: relative;
+						padding-top: 40%;
+						box-shadow: 0 0 15px $shadow-color;
+				}
+				a{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					height: 100%;
+					cursor: pointer;
+					text-decoration: none;
+					overflow: hidden;	
+					position: absolute;
+					top: 0;
+					left: 0;
+					transform: scale(1);
+					opacity: 1;
+					transition: transform 600ms 100ms ease-in-out,opacity 400ms 300ms ease-in-out;
+					
+					&:hover{
+					transform: scale(1.2);
+					opacity: 0.7;
+					}
+					p{
+						font-size: 2.7em;
+						margin-top: 0;
+					}
+					h2{
+						width: 100%;
+						text-align: center;
+						margin-top: 0;
+					}
+					img{
+						width: 80px;
+					}
+					&.lien-note{
+						background-color: $back-note-color;
+						color: $font-color-note;
+						h2{
+							font-family: 'Devonshire', cursive;
+							font-size: 2.2em;
+							font-weight: 100;
+						}
+						p{
+							font-family: 'Kalam', cursive;
+							font-weight: 900;
+							color: $font-color-note;
+						}
+					}
+					&.lien-chic{
+						background-color: $back-chic-color;
+						color: $font-color-note;
+						h2{
+							font-family: 'Croissant One', cursive;
+							font-size: 1.5em;
+							font-weight: 100;
+							background: -webkit-linear-gradient(315deg,$font-color-chic-entrees 0%,
+							 $font-color-chic-plats 60%, $font-color-chic-desserts 80%);
+							-webkit-background-clip: text;
+							color: transparent;
+						}
+						p{
+							font-family: 'PT Serif', serif;
+							font-weight: 900;
+							color: $font-color-chic-entrees;
+						}
+					}
+					&.lien-delice{
+						background-color: $back-delice-color;
+						color: $font-color-note;
+						h2{
+							font-family: 'Dancing Script', cursive;
+							font-size: 2.2em;
+							background: -webkit-linear-gradient(315deg, $font-color-delice-entrees 0%,
+							 $font-color-delice-plats 60%, $font-color-delice-desserts 80%);
+							-webkit-background-clip: text;
+							color: transparent;
+						}
+						p{
+							font-family: 'Caveat', cursive;
+							color: $font-color-delice-desserts;
+						}
+					}
+					&.lien-palette{
+						background-color: $back-palette-color;
+						color: $font-color-note;
+						h2{
+							font-family: 'Kaushan Script', cursive;
+							font-size: 2.2em;
+							background: -webkit-linear-gradient(315deg, $font-color-palette-entrees 0%,
+							 $font-color-palette-plats 60%, $font-color-palette-desserts 80%);
+							-webkit-background-clip: text;
+							color: transparent;
+						}
+						p{
+							font-family: 'Caveat', cursive;
+							color: $font-color-palette-entrees;
+						}
+					}	
+				}
+			}
+		}
+		.soon{
+			display: flex;
+			justify-content: center;
+			padding: 25px;
+			overflow: hidden;
+			&::before, &::after{
+					content: "!!!";
+					display: block;
+					width: 150px;
+					height: 120px;
+					position: relative;
+					text-align: center;
+					font-size: 3em;
+					color: $main-font-color;	
+					}
+				 &::after{
+				 	transform-origin: left;
+				 	animation: soon 1.6s 150ms ease-in-out infinite alternate;
+					 }
+				 &::before{
+				 	transform-origin: right;
+				 	animation: soon 1.6s 150ms ease-in-out infinite alternate-reverse;
+					 }
+			&__btn{
+				height: 50px;
+				width: 320px;
+				font-size: 2em;
+				color: $main-font-color;
+				background-color: $primary-color;
+				border-radius: 10px;
+				border: none;
+				transition: 350ms 150ms ease-in-out;
+				cursor: pointer;
+				&:hover{
+					background: lighten($primary-color, 20);
+					color: darken($main-font-color, 10);
+					}
+				}
+			}
+			}
+	header, footer{
+		width: 100%;
+		background-color: $primary-color;
+		z-index: 4;
+		display: flex;
+		}
+	header{
+		position: absolute;
+		height: 140px;
+		top: 0;
+		justify-content: center;
+		align-items: center;
+			h1{
+				visibility: hidden;
+				position: absolute;
+				left: -10000px;
+			}
+			a{
+				display: inline-block;
+				width: 35%;
+				max-height: 130px;
+				max-width: 570px;
+				min-width: 320px;
+				text-decoration:none;
+			}
+			img{
+				width: 100%;
+				text-align: center;
+			}
+		}
+	footer{
+		position: fixed;
+		height: 60px;
+		bottom: 0;
+		justify-content: space-between;
+			a{
+				font-family: 'Roboto';
+				font-size: 1.8em;
+				margin: 0 20px;
+				position: relative;
+				text-decoration: none;
+				color: $main-font-color;
+				&:hover{
+					 display: inline-block;
+	 				 animation: wiggle 100ms linear 6;
+					}
+				}
+		}
+}
+
+/* base page menu  *////////////////////////////////////////////////////////////
+
+.note-page, .delice-page, .palette-page, .chic-page{
+	margin: -50px 0 100px 0;
+	width: 100%;
+		main{
+			width: 100%;
+			display: flex;
+			flex-direction: column;   
+			align-items: center;               
+			font-family: 'Roboto', sans-serif;
+			font-size: 2.3em;
+			color: black;
+			.menu{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 80%;
+				box-shadow: 0 0 15px $shadow-color;
+					.title-top{
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						margin: 60px 0 60px 0;
+							img{
+								width: 140px;
+							}
+						}
+					.title-bottom{
+						display: flex;
+							img{
+								width: 100px;
+								height: 140px;
+							}
+						}
+					section{
+						width: 100%;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						margin-bottom: 50px;
+							.title{
+								display: flex;
+								justify-content: center;
+									.submenu-title{
+										cursor: pointer;
+										margin: 0 2% 0 2%;
+									}
+									.progress-underline{
+										height: 3px;
+										border-radius: 30%;
+										background-color: currentColor;
+										transform: scaleX(0);
+										transform-origin: 0% 50%;
+										transition: transform 1000ms 150ms ease-in-out;
+									}	
+								}
+						h3{
+							&:hover{
+								& + .progress-underline{
+										transform: scale(1);
+								}
+							}
+						}	
+						ul{
+							width: 80%;
+							padding: 0;
+						}
+						li{
+							display: flex;
+							justify-content: space-between;
+						}
+						.price{
+							font-weight: 900;
+						}
+
+				}
+			}
+		}
+}
+
+/* Menu la note page *////////////////////////////////////////////////
+
+
+.note-menu{
+	background-color: $back-note-color;
+	font-family: 'Kalam', sans-serif;
+	color: $font-color-note;
+		section .title{
+			width: 80%;
+		}
+		.submenu-title{
+			width: 30%;
+			text-align: center;
+		}
+		svg{
+			width: 35%;
+		}
+		h2{
+			font-family: 'Devonshire',serif;
+			font-size: 1.8em;
+			font-weight: 100;
+		}
+		h3{
+			font-size: 0.8em;
+			margin: 0;
+		}
+		p{
+			font-size: 0.6em;
+		}
+		.title-bottom h2{
+			font-size: 1.5em;
+		}
+		.title-top h2{
+			margin-top: 0;
+		}
+}
+
+
+/* Menu le chic page *////////////////////////////////////////////////
+
+
+.chic-menu{
+	background-color: $back-chic-color;
+	font-family: 'PT Serif', sans-serif;
+		section .title{
+			width: 95%;
+		}
+		.submenu-title{
+			width: 40%;
+			text-align: center;
+		}
+		svg{
+			width: 28%;
+		}
+		h2{
+			font-family: 'Croissant One', sans-serif;
+			font-size: 1.2em;
+			font-weight: 100;
+			margin:90px 0 90px 0;
+			background: -webkit-linear-gradient(315deg,$font-color-chic-entrees 0%,
+				 $font-color-chic-plats 60%, $font-color-chic-desserts 80%);
+			-webkit-background-clip: text;
+			color: transparent;
+		}
+		h3{
+			font-size: 0.6em;
+			margin: 0;
+		}
+		p{
+			font-size: 0.5em;
+		}
+		.entrees{
+				color: $font-color-chic-entrees;
+			}
+			.plats{
+				color: $font-color-chic-plats;
+			}
+			.desserts{
+				color: $font-color-chic-desserts;
+			}
+		.title-bottom h2{
+			font-size: 0.9em;
+		}
+}
+
+
+/* Menu le delice page *////////////////////////////////////////////////
+
+
+.delice-menu{
+	background-color: $back-delice-color;
+	font-family: 'Caveat', sans-serif;
+	color: black;
+		section .title{
+			width: 95%;
+		}
+		.submenu-title{
+			width: 40%;
+			text-align: center;
+				#p-u-entrees-delice{
+					background-color: $font-color-delice-entrees;
+				}
+				#p-u-plats-delice{
+					background-color: $font-color-delice-plats;
+				}
+				#p-u-desserts-delice{
+					background-color: $font-color-delice-desserts;
+				}
+		}
+		svg{
+			width: 28%;
+		}
+		.title-top, .title-bottom{
+			width: 100%;
+		}
+		h2{
+			text-align: center;
+			width: 70%;
+			font-family: 'Dancing Script', sans-serif;
+			font-size: 2em;
+			font-weight: 100;
+			margin: 60px;
+			background: -webkit-linear-gradient(315deg, $font-color-delice-entrees 0%,
+					 $font-color-delice-plats 60%, $font-color-delice-desserts 80%);
+			-webkit-background-clip: text;
+			color: transparent;
+		}
+		h3{
+			font-size: 1em;
+			margin: 0;
+			font-weight: 100;
+		}
+		p{
+			font-size: 0.8em;
+		}
+		.title-bottom {
+			justify-content: center;
+			h2{
+			font-size: 1.5em;
+			}
+		}
+}
+
+
+/* Menu la palette page *////////////////////////////////////////////////
+
+
+.palette-menu{
+	background-color: $back-delice-color;
+	font-family: 'Kalam', sans-serif;
+	color: black;
+		.title-top, .title-bottom{
+			width: 100%;
+		}
+		section .title{
+			width: 95%;
+				.submenu-title{
+					width: 30%;
+					text-align: center;
+					#p-u-palette{
+						background-color: $font-color-palette-entrees;
+					}
+				}
+				svg{
+					width: 30%;
+				}
+				h3{
+					font-weight: 100;
+					font-size: 0.8em;
+					margin: 0;
+				}
+		}		
+		h2{
+			font-family: 'Kaushan Script', sans-serif;
+			font-size: 1.8em;
+			text-align: center;
+			width: 70%;
+			background: -webkit-linear-gradient(315deg, $font-color-palette-entrees 0%,
+				 $font-color-palette-plats 60%, $font-color-palette-desserts 80%);
+			-webkit-background-clip: text;
+			color: transparent;
+		}
+		p{
+			font-size: 0.6em;
+		}
+		
+		.title-bottom {
+			justify-content: center;
+			h2{
+			font-size: 1.5em;
+			}
+		}
+}
+
+
+/* Responsive acceuil 1200px *////////////////////////////////////////////////
+
+@media all and (max-width: 1200px)
+{
+		#bloc-page .accueil__section{
+			width: 32%;
+			padding-top: 45%
+		}
+}
+
+
+/* Responsive acceuil 1050px *////////////////////////////////////////////////
+
+@media all and (max-width: 1050px)
+{
+		#bloc-page .accueil__section{
+			width: 45%;
+			padding-top: 60%;
+			margin: 0 10px 0 10px;
+		}
+}
+
+
+/* Responsive acceuil 750px *////////////////////////////////////////////////
+
+@media all and (max-width: 750px)
+{
+	body{
+		overflow-x: hidden;
+		#bloc-page, .bloc-page{
+			footer a{
+				font-size: 1.1em;
+			}
+			.soon{
+				&::after{
+				width: 70px
+				}
+				&::before {
+				width: 70px
+				}
+				&__btn{
+					width: 200px;
+					font-size: 1.5em;
+				}
+			}
+			.accueil div{
+				flex-direction: column;
+				margin-bottom: 0;
+			}
+			.accueil__section{
+				width: 100%;
+				padding-top: 100%;
+				margin:0 0 30px 0;
+			}
+		}
+	}		
+}
+
+
+/* Responsive base menu 1050px *////////////////////////////////////////////////
+
+@media all and (max-width: 1050px)
+{
+	.note-page, .delice-page, .palette-page, .chic-page{
+		main{
+			font-size: 2em;
+			.menu{
+				width: 100%;
+				.title-top{
+					margin: 0;
+					img{
+						width: 100px;
+					}
+				}
+				section{
+					.price{
+						margin-left: 20px;
+					}
+					.title{
+						width: 95%;
+					}
+				}
+			}
+		}
+	}
+}
