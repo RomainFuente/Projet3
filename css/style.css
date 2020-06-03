@@ -264,7 +264,7 @@ body #bloc-page main div section a {
     .palette-menu section .title .submenu-title {
       width: 30%;
       text-align: center; }
-      .palette-menu section .title .submenu-title #p-u-palette {
+      .palette-menu section .title .submenu-title #p-u-entrees-palette, .palette-menu section .title .submenu-title #p-u-plats-palette, .palette-menu section .title .submenu-title #p-u-desserts-palette {
         background-color: #489b40; }
     .palette-menu section .title svg {
       width: 30%; }
