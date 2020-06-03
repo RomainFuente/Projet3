@@ -1,0 +1,32 @@
+// accueil lien le délice des papilles //
+
+.lien-delice{
+	background-color: $back-delice-color;
+	color: $font-color-note;
+	
+		h2{
+			font-family: 'Dancing Script', cursive;
+			font-size: 2.2em;
+			background: -webkit-linear-gradient(315deg, $font-color-delice-entrees 0%,
+			 $font-color-delice-plats 60%, $font-color-delice-desserts 80%);
+			-webkit-background-clip: text;
+			color: transparent;
+		}
+		
+		p{
+			font-family: 'Caveat', cursive;
+			color: $font-color-delice-desserts;
+		}
+}
+
+/* Responsive acceuil 360px *////////////////////////////////////////////////
+
+@media all and (max-width: 360px)
+{
+	.lien-delice{
+	
+			h2{
+				font-size: 2.1em;
+			}
+	}
+}

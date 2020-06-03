@@ -1,0 +1,77 @@
+/* Menu la palette page *////////////////////////////////////////////////
+
+
+.palette-menu{
+	background-color: $back-delice-color;
+	font-family: 'Kalam', sans-serif;
+	color: black;
+		.title-top, .title-bottom{
+			width: 100%;
+		}
+		
+		section .title{
+			width: 95%;
+				.submenu-title{
+					width: 30%;
+					text-align: center;
+					#p-u-palette{
+						background-color: $font-color-palette-entrees;
+					}
+				}
+				svg{
+					width: 30%;
+				}
+				h3{
+					font-weight: 100;
+					font-size: 0.8em;
+					margin: 0;
+				}
+		}		
+		h2{
+			font-family: 'Kaushan Script', sans-serif;
+			font-size: 1.8em;
+			text-align: center;
+			width: 70%;
+			background: -webkit-linear-gradient(315deg, $font-color-palette-entrees 0%,
+				 $font-color-palette-plats 60%, $font-color-palette-desserts 80%);
+			-webkit-background-clip: text;
+			color: transparent;
+		}
+		p{
+			font-size: 0.6em;
+		}
+		
+		.title-bottom {
+			justify-content: center;
+			h2{
+			font-size: 1.5em;
+			}
+		}
+}
+
+
+/* Responsive menu La palette 750px *////////////////////////////////////////////////
+
+@media all and (max-width: 750px)
+{
+	.palette-menu{
+			section .title .submenu-title{
+				width: 60%;
+			}
+			h2{
+				font-size: 1.2em;
+			}
+			h3{
+				font-size: 0.7em;
+			}
+			p{
+				font-size: 0.6em;
+			}
+			.title-bottom {
+				h2{
+				font-size: 1em;
+				}
+			}
+	}
+
+}

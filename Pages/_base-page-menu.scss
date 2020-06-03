@@ -1,0 +1,31 @@
+// base bloc page acceuil //
+
+
+#bloc-page{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		main{
+			width: 100%;
+			min-height: 100%;
+			display: flex;
+			flex-direction: column;
+			
+			div{
+				display: flex;
+				justify-content: center;
+				margin-bottom: 70px;
+				
+				section{
+					width: 28%;
+					overflow: hidden;
+					margin: 0 35px 0 35px;
+					position: relative;
+					padding-top: 40%;
+					box-shadow: 0 0 15px $shadow-color;
+				}
+			}
+		}
+}	

@@ -1,0 +1,7 @@
+// bases communes header footer 
+header, footer{
+		width: 100%;
+		background-color: $primary-color;
+		z-index: 4;
+		display: flex;
+	}
