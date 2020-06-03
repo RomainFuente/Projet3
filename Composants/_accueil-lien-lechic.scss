@@ -1,0 +1,34 @@
+// accueil lien le chic a la française //
+
+.lien-chic{
+	background-color: $back-chic-color;
+	color: $font-color-note;
+		
+		h2{
+			font-family: 'Croissant One', cursive;
+			font-size: 1.5em;
+			font-weight: 100;
+			background: -webkit-linear-gradient(315deg,$font-color-chic-entrees 0%,
+			 $font-color-chic-plats 60%, $font-color-chic-desserts 80%);
+			-webkit-background-clip: text;
+			color: transparent;
+		}
+		
+		p{
+			font-family: 'PT Serif', serif;
+			font-weight: 900;
+			color: $font-color-chic-entrees;
+		}
+}
+
+/* Responsive acceuil 360px *////////////////////////////////////////////////
+
+@media all and (max-width: 360px)
+{
+	.lien-chic{
+	
+			h2{
+				font-size: 1.4em;
+			}
+	}
+}

@@ -16,178 +16,177 @@
 body {
   width: 100%;
   margin: 190px 0 30px 0; }
-  body #bloc-page {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    body #bloc-page main {
-      width: 100%;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column; }
-      body #bloc-page main div {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 70px; }
-        body #bloc-page main div section {
-          width: 28%;
-          overflow: hidden;
-          margin: 0 35px 0 35px;
-          position: relative;
-          padding-top: 40%;
-          box-shadow: 0 0 15px #b8b8b8; }
-        body #bloc-page main div a {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 100%;
-          cursor: pointer;
-          text-decoration: none;
-          overflow: hidden;
-          position: absolute;
-          top: 0;
-          left: 0;
-          transform: scale(1);
-          opacity: 1;
-          transition: transform 600ms 100ms ease-in-out,opacity 400ms 300ms ease-in-out; }
-          body #bloc-page main div a:hover {
-            transform: scale(1.2);
-            opacity: 0.7; }
-          body #bloc-page main div a p {
-            font-size: 2.7em;
-            margin-top: 0; }
-          body #bloc-page main div a h2 {
-            width: 100%;
-            text-align: center;
-            margin-top: 0; }
-          body #bloc-page main div a img {
-            width: 80px; }
-          body #bloc-page main div a.lien-note {
-            background-color: #fcdfdb;
-            color: #3c1218; }
-            body #bloc-page main div a.lien-note h2 {
-              font-family: 'Devonshire', cursive;
-              font-size: 2.2em;
-              font-weight: 100; }
-            body #bloc-page main div a.lien-note p {
-              font-family: 'Kalam', cursive;
-              font-weight: 900;
-              color: #3c1218; }
-          body #bloc-page main div a.lien-chic {
-            background-color: #fff5fe;
-            color: #3c1218; }
-            body #bloc-page main div a.lien-chic h2 {
-              font-family: 'Croissant One', cursive;
-              font-size: 1.5em;
-              font-weight: 100;
-              background: -webkit-linear-gradient(315deg, #c67412 0%, #a56799 60%, #6e4ccc 80%);
-              -webkit-background-clip: text;
-              color: transparent; }
-            body #bloc-page main div a.lien-chic p {
-              font-family: 'PT Serif', serif;
-              font-weight: 900;
-              color: #c67412; }
-          body #bloc-page main div a.lien-delice {
-            background-color: #f7f7f7;
-            color: #3c1218; }
-            body #bloc-page main div a.lien-delice h2 {
-              font-family: 'Dancing Script', cursive;
-              font-size: 2.2em;
-              background: -webkit-linear-gradient(315deg, #0228dd 0%, #0670f3 60%, #229df9 80%);
-              -webkit-background-clip: text;
-              color: transparent; }
-            body #bloc-page main div a.lien-delice p {
-              font-family: 'Caveat', cursive;
-              color: #229df9; }
-          body #bloc-page main div a.lien-palette {
-            background-color: #fdfffd;
-            color: #3c1218; }
-            body #bloc-page main div a.lien-palette h2 {
-              font-family: 'Kaushan Script', cursive;
-              font-size: 2.2em;
-              background: -webkit-linear-gradient(315deg, #489b40 0%, #90d867 60%, #beff7f 80%);
-              -webkit-background-clip: text;
-              color: transparent; }
-            body #bloc-page main div a.lien-palette p {
-              font-family: 'Caveat', cursive;
-              color: #489b40; }
-    body #bloc-page .soon {
-      display: flex;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-      left: 20px; }
-      body #bloc-page .soon p {
-        display: block;
-        position: relative;
-        font-size: 3em;
-        left: -50px;
-        top: -55px;
-        color: #fdcb46;
-        cursor: pointer; }
-      body #bloc-page .soon .anim-soon-btn-1 {
-        animation: soon 1.6s 150ms ease-in-out infinite alternate; }
-      body #bloc-page .soon .anim-soon-btn-2 {
-        animation: soon 1.6s 650ms ease-in-out infinite alternate; }
-      body #bloc-page .soon .anim-soon-btn-3 {
-        animation: soon 1.6s 1050ms ease-in-out infinite alternate; }
-      body #bloc-page .soon__btn {
-        height: 50px;
-        width: 280px;
-        font-size: 2em;
-        color: #fdcb46;
-        background-color: #579c87;
-        border-radius: 10px;
-        border: none;
-        transition: 350ms 150ms ease-in-out;
-        cursor: pointer;
-        text-align: start; }
-        body #bloc-page .soon__btn:hover {
-          background: #95c4b6;
-          color: #fcbd14; }
-  body header, body footer {
-    width: 100%;
-    background-color: #579c87;
-    z-index: 4;
-    display: flex; }
-  body header {
-    position: absolute;
-    height: 140px;
-    top: 0;
-    justify-content: center;
-    align-items: center; }
-    body header h1 {
-      visibility: hidden;
-      position: absolute;
-      left: -10000px; }
-    body header a {
-      display: inline-block;
-      width: 35%;
-      max-height: 130px;
-      max-width: 570px;
-      min-width: 320px;
-      text-decoration: none; }
-    body header img {
-      width: 100%;
-      text-align: center; }
-  body footer {
-    position: fixed;
+
+header, footer {
+  width: 100%;
+  background-color: #579c87;
+  z-index: 4;
+  display: flex; }
+
+footer {
+  position: fixed;
+  height: 60px;
+  bottom: 0;
+  justify-content: space-between; }
+
+header {
+  position: absolute;
+  height: 140px;
+  top: 0;
+  justify-content: center;
+  align-items: center; }
+
+.lien-note {
+  background-color: #fcdfdb;
+  color: #3c1218; }
+  .lien-note h2 {
+    font-family: 'Devonshire', cursive;
+    font-size: 2.2em;
+    font-weight: 100; }
+  .lien-note p {
+    font-family: 'Kalam', cursive;
+    font-weight: 900;
+    color: #3c1218; }
+
+.lien-palette {
+  background-color: #fdfffd;
+  color: #3c1218; }
+  .lien-palette h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.2em;
+    background: -webkit-linear-gradient(315deg, #489b40 0%, #90d867 60%, #beff7f 80%);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .lien-palette p {
+    font-family: 'Caveat', cursive;
+    color: #489b40; }
+
+.lien-delice {
+  background-color: #f7f7f7;
+  color: #3c1218; }
+  .lien-delice h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2em;
+    background: -webkit-linear-gradient(315deg, #0228dd 0%, #0670f3 60%, #229df9 80%);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .lien-delice p {
+    font-family: 'Caveat', cursive;
+    color: #229df9; }
+
+/* Responsive acceuil 360px */
+@media all and (max-width: 360px) {
+  .lien-delice h2 {
+    font-size: 2.1em; } }
+.lien-chic {
+  background-color: #fff5fe;
+  color: #3c1218; }
+  .lien-chic h2 {
+    font-family: 'Croissant One', cursive;
+    font-size: 1.5em;
+    font-weight: 100;
+    background: -webkit-linear-gradient(315deg, #c67412 0%, #a56799 60%, #6e4ccc 80%);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .lien-chic p {
+    font-family: 'PT Serif', serif;
+    font-weight: 900;
+    color: #c67412; }
+
+/* Responsive acceuil 360px */
+@media all and (max-width: 360px) {
+  .lien-chic h2 {
+    font-size: 1.4em; } }
+.soon {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  left: 20px; }
+  .soon__btn {
     height: 60px;
-    bottom: 0;
-    justify-content: space-between; }
-    body footer a {
-      font-family: 'Roboto';
-      font-size: 1.8em;
-      margin: 0 20px;
-      position: relative;
-      text-decoration: none;
-      color: #fdcb46; }
-      body footer a:hover {
-        display: inline-block;
-        animation: wiggle 100ms linear 6; }
+    width: 300px;
+    font-size: 1.8em;
+    color: #fdcb46;
+    background-color: #579c87;
+    border-radius: 10px;
+    border: none;
+    transition: 350ms 150ms ease-in-out;
+    cursor: pointer;
+    text-align: start;
+    padding-left: 20px; }
+    .soon__btn:hover {
+      background: #95c4b6;
+      color: #fcbd14; }
+  .soon p {
+    display: block;
+    position: relative;
+    font-size: 3em;
+    left: -60px;
+    top: -50px;
+    color: #fdcb46;
+    cursor: pointer; }
+  .soon .anim-soon-btn-1 {
+    animation: soon 1.6s 150ms ease-in-out infinite alternate; }
+  .soon .anim-soon-btn-2 {
+    animation: soon 1.6s 650ms ease-in-out infinite alternate; }
+  .soon .anim-soon-btn-3 {
+    animation: soon 1.6s 1050ms ease-in-out infinite alternate; }
+
+body footer a {
+  font-family: 'Roboto';
+  font-size: 1.8em;
+  margin: 0 20px;
+  position: relative;
+  text-decoration: none;
+  color: #fdcb46; }
+  body footer a:hover {
+    display: inline-block;
+    animation: wiggle 100ms linear 6; }
+
+body header h1 {
+  visibility: hidden;
+  position: absolute;
+  left: -10000px; }
+body header a {
+  display: inline-block;
+  width: 35%;
+  max-height: 130px;
+  max-width: 570px;
+  min-width: 300px;
+  text-decoration: none; }
+body header img {
+  width: 100%;
+  text-align: center; }
+
+body #bloc-page main div section a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 600ms 100ms ease-in-out,opacity 400ms 300ms ease-in-out; }
+  body #bloc-page main div section a:hover {
+    transform: scale(1.2);
+    opacity: 0.7; }
+  body #bloc-page main div section a p {
+    font-size: 2.7em;
+    margin-top: 0; }
+  body #bloc-page main div section a h2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 0; }
+  body #bloc-page main div section a img {
+    width: 80px; }
 
 /* base page menu  */
 .note-page, .delice-page, .palette-page, .chic-page {
@@ -245,34 +244,81 @@ body {
         .note-page main .menu section ul, .delice-page main .menu section ul, .palette-page main .menu section ul, .chic-page main .menu section ul {
           width: 80%;
           padding: 0; }
-        .note-page main .menu section li, .delice-page main .menu section li, .palette-page main .menu section li, .chic-page main .menu section li {
-          display: flex;
-          justify-content: space-between; }
-        .note-page main .menu section .price, .delice-page main .menu section .price, .palette-page main .menu section .price, .chic-page main .menu section .price {
-          display: flex;
-          align-items: center;
-          font-weight: 900; }
+          .note-page main .menu section ul li, .delice-page main .menu section ul li, .palette-page main .menu section ul li, .chic-page main .menu section ul li {
+            display: flex;
+            justify-content: space-between; }
+            .note-page main .menu section ul li .price, .delice-page main .menu section ul li .price, .palette-page main .menu section ul li .price, .chic-page main .menu section ul li .price {
+              display: flex;
+              align-items: center;
+              font-weight: 900; }
 
+/* Menu la palette page */
+.palette-menu {
+  background-color: #f7f7f7;
+  font-family: 'Kalam', sans-serif;
+  color: black; }
+  .palette-menu .title-top, .palette-menu .title-bottom {
+    width: 100%; }
+  .palette-menu section .title {
+    width: 95%; }
+    .palette-menu section .title .submenu-title {
+      width: 30%;
+      text-align: center; }
+      .palette-menu section .title .submenu-title #p-u-palette {
+        background-color: #489b40; }
+    .palette-menu section .title svg {
+      width: 30%; }
+    .palette-menu section .title h3 {
+      font-weight: 100;
+      font-size: 0.8em;
+      margin: 0; }
+  .palette-menu h2 {
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    width: 70%;
+    background: -webkit-linear-gradient(315deg, #489b40 0%, #90d867 60%, #beff7f 80%);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .palette-menu p {
+    font-size: 0.6em; }
+  .palette-menu .title-bottom {
+    justify-content: center; }
+    .palette-menu .title-bottom h2 {
+      font-size: 1.5em; }
+
+/* Responsive menu La palette 750px */
+@media all and (max-width: 750px) {
+  .palette-menu section .title .submenu-title {
+    width: 60%; }
+  .palette-menu h2 {
+    font-size: 1.2em; }
+  .palette-menu h3 {
+    font-size: 0.7em; }
+  .palette-menu p {
+    font-size: 0.6em; }
+  .palette-menu .title-bottom h2 {
+    font-size: 1em; } }
 /* Menu la note page */
 .note-menu {
   background-color: #fcdfdb;
   font-family: 'Kalam', sans-serif;
   color: #3c1218; }
-  .note-menu section .title {
-    width: 80%; }
-  .note-menu .submenu-title {
-    width: 30%;
-    text-align: center; }
-  .note-menu svg {
-    width: 35%; }
   .note-menu h2 {
     font-family: 'Devonshire',serif;
     font-size: 1.8em;
     font-weight: 100; }
-  .note-menu h3 {
-    font-size: 0.8em;
-    margin: 0; }
-  .note-menu p {
+  .note-menu section .title {
+    width: 80%; }
+    .note-menu section .title .submenu-title {
+      width: 30%;
+      text-align: center; }
+      .note-menu section .title .submenu-title h3 {
+        font-size: 0.8em;
+        margin: 0; }
+    .note-menu section .title svg {
+      width: 35%; }
+  .note-menu section p {
     font-size: 0.6em; }
   .note-menu .title-bottom h2 {
     font-size: 1.5em; }
@@ -283,57 +329,16 @@ body {
 @media all and (max-width: 750px) {
   .note-page .note-menu h2 {
     font-size: 1.2em; }
-  .note-page .note-menu .submenu-title {
+  .note-page .note-menu .title .submenu-title {
     width: 30%;
     text-align: center; }
-  .note-page .note-menu h3 {
-    font-size: 0.7em;
-    margin: 0; }
+    .note-page .note-menu .title .submenu-title h3 {
+      font-size: 0.7em;
+      margin: 0; }
   .note-page .note-menu p {
     font-size: 0.6em; }
   .note-page .note-menu .title-top h2, .note-page .note-menu .title-bottom h2 {
     margin-top: 0; } }
-/* Menu le chic page */
-.chic-menu {
-  background-color: #fff5fe;
-  font-family: 'PT Serif', sans-serif; }
-  .chic-menu section .title {
-    width: 95%; }
-  .chic-menu .submenu-title {
-    width: 40%;
-    text-align: center; }
-  .chic-menu svg {
-    width: 28%; }
-  .chic-menu h2 {
-    font-family: 'Croissant One', sans-serif;
-    font-size: 1.2em;
-    font-weight: 100;
-    margin: 90px 0 90px 0;
-    background: -webkit-linear-gradient(315deg, #c67412 0%, #a56799 60%, #6e4ccc 80%);
-    -webkit-background-clip: text;
-    color: transparent; }
-  .chic-menu h3 {
-    font-size: 0.6em;
-    margin: 0; }
-  .chic-menu p {
-    font-size: 0.5em; }
-  .chic-menu .entrees {
-    color: #c67412; }
-  .chic-menu .plats {
-    color: #a56799; }
-  .chic-menu .desserts {
-    color: #6e4ccc; }
-  .chic-menu .title-bottom h2 {
-    font-size: 0.9em; }
-
-/* Responsive menu Le chic 750px */
-@media all and (max-width: 750px) {
-  .chic-menu h2 {
-    font-size: 0.8em; }
-  .chic-menu h3 {
-    font-size: 0.5em; }
-  .chic-menu .title-bottom h2 {
-    font-size: 0.7em; } }
 /* Menu le delice page */
 .delice-menu {
   background-color: #f7f7f7;
@@ -385,53 +390,47 @@ body {
     font-size: 0.7em; }
   .delice-menu .title-bottom h2 {
     font-size: 1em; } }
-/* Menu la palette page */
-.palette-menu {
-  background-color: #f7f7f7;
-  font-family: 'Kalam', sans-serif;
-  color: black; }
-  .palette-menu .title-top, .palette-menu .title-bottom {
-    width: 100%; }
-  .palette-menu section .title {
+/* Menu le chic page */
+.chic-menu {
+  background-color: #fff5fe;
+  font-family: 'PT Serif', sans-serif; }
+  .chic-menu section .title {
     width: 95%; }
-    .palette-menu section .title .submenu-title {
-      width: 30%;
-      text-align: center; }
-      .palette-menu section .title .submenu-title #p-u-palette {
-        background-color: #489b40; }
-    .palette-menu section .title svg {
-      width: 30%; }
-    .palette-menu section .title h3 {
-      font-weight: 100;
-      font-size: 0.8em;
-      margin: 0; }
-  .palette-menu h2 {
-    font-family: 'Kaushan Script', sans-serif;
-    font-size: 1.8em;
-    text-align: center;
-    width: 70%;
-    background: -webkit-linear-gradient(315deg, #489b40 0%, #90d867 60%, #beff7f 80%);
+  .chic-menu .submenu-title {
+    width: 40%;
+    text-align: center; }
+  .chic-menu svg {
+    width: 28%; }
+  .chic-menu h2 {
+    font-family: 'Croissant One', sans-serif;
+    font-size: 1.2em;
+    font-weight: 100;
+    margin: 90px 0 90px 0;
+    background: -webkit-linear-gradient(315deg, #c67412 0%, #a56799 60%, #6e4ccc 80%);
     -webkit-background-clip: text;
     color: transparent; }
-  .palette-menu p {
-    font-size: 0.6em; }
-  .palette-menu .title-bottom {
-    justify-content: center; }
-    .palette-menu .title-bottom h2 {
-      font-size: 1.5em; }
+  .chic-menu h3 {
+    font-size: 0.6em;
+    margin: 0; }
+  .chic-menu p {
+    font-size: 0.5em; }
+  .chic-menu .entrees {
+    color: #c67412; }
+  .chic-menu .plats {
+    color: #a56799; }
+  .chic-menu .desserts {
+    color: #6e4ccc; }
+  .chic-menu .title-bottom h2 {
+    font-size: 0.9em; }
 
-/* Responsive menu La palette 750px */
+/* Responsive menu Le chic 750px */
 @media all and (max-width: 750px) {
-  .palette-menu section .title .submenu-title {
-    width: 60%; }
-  .palette-menu h2 {
-    font-size: 1.2em; }
-  .palette-menu h3 {
-    font-size: 0.7em; }
-  .palette-menu p {
-    font-size: 0.6em; }
-  .palette-menu .title-bottom h2 {
-    font-size: 1em; } }
+  .chic-menu h2 {
+    font-size: 0.8em; }
+  .chic-menu h3 {
+    font-size: 0.5em; }
+  .chic-menu .title-bottom h2 {
+    font-size: 0.7em; } }
 /* Responsive acceuil 1200px */
 @media all and (max-width: 1200px) {
   #bloc-page .accueil__section {
@@ -447,15 +446,29 @@ body {
 @media all and (max-width: 750px) {
   body {
     overflow-x: hidden; }
-    body #bloc-page footer a, body .bloc-page footer a {
-      font-size: 1.1em; }
-    body #bloc-page .accueil div, body .bloc-page .accueil div {
-      flex-direction: column;
-      margin-bottom: 0; }
-    body #bloc-page .accueil__section, body .bloc-page .accueil__section {
-      width: 100%;
-      padding-top: 100%;
-      margin: 0 0 30px 0; } }
+    body #bloc-page, body .bloc-page {
+      overflow: hidden; }
+      body #bloc-page .soon__btn, body .bloc-page .soon__btn {
+        height: 50px;
+        width: 260px;
+        font-size: 1.5em; }
+      body #bloc-page .soon p, body .bloc-page .soon p {
+        font-size: 2.75em; }
+      body #bloc-page footer, body .bloc-page footer {
+        height: 50px; }
+        body #bloc-page footer a, body .bloc-page footer a {
+          font-size: 1.1em; }
+      body #bloc-page .accueil div, body .bloc-page .accueil div {
+        flex-direction: column;
+        margin-bottom: 0; }
+        body #bloc-page .accueil div .accueil__section, body .bloc-page .accueil div .accueil__section {
+          width: 100%;
+          padding-top: 100%;
+          margin: 0 0 30px 0; } }
+/* Responsive acceuil 360px */
+@media all and (max-width: 360px) {
+  body #bloc-page footer a, body .bloc-page footer a {
+    font-size: 0.9em; } }
 /* Responsive base menu 1050px */
 @media all and (max-width: 1050px) {
   .note-page main .menu, .delice-page main .menu, .palette-page main .menu, .chic-page main .menu {
@@ -470,7 +483,7 @@ body {
       width: 95%; } }
 /* Responsive base menu 750px */
 @media all and (max-width: 750px) {
-  .note-page .main-title, .delice-page .main-title, .palette-page .main-title, .chic-page .main-title {
+  .note-page main .main-title, .delice-page main .main-title, .palette-page main .main-title, .chic-page main .main-title {
     font-size: 1em; }
   .note-page main .menu, .delice-page main .menu, .palette-page main .menu, .chic-page main .menu {
     width: 100%; }
@@ -485,3 +498,26 @@ body {
       width: 95%; }
     .note-page main .menu section ul, .delice-page main .menu section ul, .palette-page main .menu section ul, .chic-page main .menu section ul {
       margin: 0; } }
+#bloc-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #bloc-page main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column; }
+    #bloc-page main div {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 70px; }
+      #bloc-page main div section {
+        width: 28%;
+        overflow: hidden;
+        margin: 0 35px 0 35px;
+        position: relative;
+        padding-top: 40%;
+        box-shadow: 0 0 15px #b8b8b8; }
+
+/*# sourceMappingURL=style.css.map */
