@@ -142,7 +142,7 @@ body footer a {
   color: #fdcb46; }
   body footer a:hover {
     display: inline-block;
-    animation: wiggle 100ms linear 6; }
+    animation: wiggle 120ms linear 6; }
 
 body header h1 {
   visibility: hidden;

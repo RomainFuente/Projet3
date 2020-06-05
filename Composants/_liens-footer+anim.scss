@@ -1,7 +1,9 @@
 // Liens footer + anim //
 
 body{
+
 	footer{
+		
 		a{
 			font-family: 'Roboto';
 			font-size: 1.8em;
@@ -11,7 +13,7 @@ body{
 			color: $main-font-color;
 			&:hover{
 				 display: inline-block;
-					 animation: wiggle 100ms linear 6;
+					 animation: wiggle 120ms linear 6;
 				}
 		}
 	}
