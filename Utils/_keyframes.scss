@@ -6,9 +6,19 @@
 		opacity: 1;
 	}
 }
+
+
 @keyframes wiggle {
-    0% { transform: translateX(0); }
-   33% { transform: translateX(7px); }
-   66% { transform: translateX(-7px); }
-  100% { transform: translateX(0); }
+    0% { 
+    	transform: translateX(0); 
+    }
+   	33% { 
+   	transform: translateX(7px); 
+    }
+  	66% { 
+   	transform: translateX(-7px); 
+    }
+  	100% { 
+  	transform: translateX(0); 
+    }
 }
