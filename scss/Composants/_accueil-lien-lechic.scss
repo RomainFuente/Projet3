@@ -10,6 +10,7 @@
 			font-weight: 100;
 			background: -webkit-linear-gradient(315deg,$font-color-chic-entrees 0%,
 			 $font-color-chic-plats 60%, $font-color-chic-desserts 80%);
+			background-clip: text;
 			-webkit-background-clip: text;
 			color: transparent;
 		}
