@@ -14,7 +14,7 @@
 				.submenu-title{
 					width: 30%;
 					text-align: center;
-					#p-u-entrees-palette, #p-u-plats-palette, #p-u-desserts-palette{
+					#p-u-entree-palette, #p-u-plats-palette, #p-u-desserts-palette{
 						background-color: $font-color-palette-entrees;
 					}
 				}
@@ -34,6 +34,7 @@
 			width: 70%;
 			background: -webkit-linear-gradient(315deg, $font-color-palette-entrees 0%,
 				 $font-color-palette-plats 60%, $font-color-palette-desserts 80%);
+			background-clip: text;
 			-webkit-background-clip: text;
 			color: transparent;
 		}
