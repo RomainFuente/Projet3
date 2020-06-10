@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./scss/main.scss:./css/style.css"
+    "sass": "sass --watch ./scss/main.scss:./css/style.css --style compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "dependencies": {
-    "node-sass": "^4.14.1"
+    "autoprefixer": "^9.8.0",
+    "node-sass": "^4.14.1",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1"
   }
 }
