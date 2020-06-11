@@ -5,54 +5,54 @@
 	background-color: $back-delice-color;
 	font-family: 'Caveat', sans-serif;
 	color: black;
-		section .title{
-			width: 95%;
-		}
-		.submenu-title{
-			width: 40%;
-			text-align: center;
-				#p-u-entrees-delice{
-					background-color: $font-color-delice-entrees;
-				}
-				#p-u-plats-delice{
-					background-color: $font-color-delice-plats;
-				}
-				#p-u-desserts-delice{
-					background-color: $font-color-delice-desserts;
-				}
-		}
-		svg{
-			width: 28%;
-		}
-		.title-top, .title-bottom{
-			width: 100%;
-		}
-		h2{
-			text-align: center;
-			width: 70%;
-			font-family: 'Dancing Script', sans-serif;
-			font-size: 2em;
-			font-weight: 100;
-			margin: 60px;
-			background: -webkit-linear-gradient(315deg, $font-color-delice-entrees 0%,
-					 $font-color-delice-plats 60%, $font-color-delice-desserts 80%);
-			-webkit-background-clip: text;
-			color: transparent;
-		}
-		h3{
-			font-size: 1em;
-			margin: 0;
-			font-weight: 100;
-		}
-		p{
-			font-size: 0.8em;
-		}
-		.title-bottom {
-			justify-content: center;
-			h2{
-			font-size: 1.5em;
+	section .title{
+		width: 95%;
+	}
+	.submenu-title{
+		width: 40%;
+		text-align: center;
+			#p-u-entrees-delice{
+				background-color: $font-color-delice-entrees;
 			}
+			#p-u-plats-delice{
+				background-color: $font-color-delice-plats;
+			}
+			#p-u-desserts-delice{
+				background-color: $font-color-delice-desserts;
+			}
+	}
+	svg{
+		width: 28%;
+	}
+	.title-top, .title-bottom{
+		width: 100%;
+	}
+	h2{
+		text-align: center;
+		width: 70%;
+		font-family: 'Dancing Script', sans-serif;
+		font-size: 2em;
+		font-weight: 100;
+		margin: 60px;
+		background: -webkit-linear-gradient(315deg, $font-color-delice-entrees 0%,
+				 $font-color-delice-plats 60%, $font-color-delice-desserts 80%);
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+	h3{
+		font-size: 1em;
+		margin: 0;
+		font-weight: 100;
+	}
+	p{
+		font-size: 0.8em;
+	}
+	.title-bottom {
+		justify-content: center;
+		h2{
+		font-size: 1.5em;
 		}
+	}
 }
 
 /* Responsive menu Le délice 750px *////////////////////////////////////////////////
@@ -60,19 +60,19 @@
 @media all and (max-width: 750px)
 {
 	.delice-menu{
+		h2{
+			font-size: 1.2em;
+		}
+		h3{
+			font-size: 0.8em;
+		}
+		p{
+			font-size: 0.7em;
+		}
+		.title-bottom {
 			h2{
-				font-size: 1.2em;
+			font-size: 1em;
 			}
-			h3{
-				font-size: 0.8em;
-			}
-			p{
-				font-size: 0.7em;
-			}
-			.title-bottom {
-				h2{
-				font-size: 1em;
-				}
-			}
+		}
 	}	
 }

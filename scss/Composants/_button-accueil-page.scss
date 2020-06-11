@@ -7,44 +7,44 @@
 	position: relative;
 	left: 20px;
 
-		&__btn{
-			height: 60px;
-			width: 300px;
-			font-size: 1.8em;
-			color: $main-font-color;
-			background-color: $primary-color;
-			border-radius: 10px;
-			border: none;
-			transition: 350ms 150ms ease-in-out;
-			cursor: pointer;
-			text-align: start;
-			padding-left: 20px;
-				
-				&:hover{
-					background: lighten($primary-color, 20);
-					color: darken($main-font-color, 10);
-					}
+	&__btn{
+		height: 60px;
+		width: 300px;
+		font-size: 1.8em;
+		color: $main-font-color;
+		background-color: $primary-color;
+		border-radius: 10px;
+		border: none;
+		transition: 350ms 150ms ease-in-out;
+		cursor: pointer;
+		text-align: start;
+		padding-left: 20px;
+			
+		&:hover{
+			background: lighten($primary-color, 20);
+			color: darken($main-font-color, 10);
 		}
+	}
 
-		p{
-			display: block;
-			position: relative;
-			font-size: 3em;
-			left: -60px;
-			top: -50px;
-			color: $main-font-color;
-			cursor: pointer;
-		}
+	p{
+		display: block;
+		position: relative;
+		font-size: 3em;
+		left: -60px;
+		top: -50px;
+		color: $main-font-color;
+		cursor: pointer;
+	}
 
-		.anim-soon-btn-1{
-			animation: soon 1.6s 150ms ease-in-out infinite alternate;
-		}
+	.anim-soon-btn-1{
+		animation: soon 1.6s 150ms ease-in-out infinite alternate;
+	}
 
-		.anim-soon-btn-2{
-			animation: soon 1.6s 650ms ease-in-out infinite alternate;
-		}
+	.anim-soon-btn-2{
+		animation: soon 1.6s 650ms ease-in-out infinite alternate;
+	}
 
-		.anim-soon-btn-3{
-			animation: soon 1.6s 1050ms ease-in-out infinite alternate;
-		}
+	.anim-soon-btn-3{
+		animation: soon 1.6s 1050ms ease-in-out infinite alternate;
+	}
 }
