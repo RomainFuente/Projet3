@@ -4,45 +4,45 @@
 .chic-menu{
 	background-color: $back-chic-color;
 	font-family: 'PT Serif', sans-serif;
-		section .title{
-			width: 95%;
+	section .title{
+		width: 95%;
+	}
+	.submenu-title{
+		width: 40%;
+		text-align: center;
+	}
+	svg{
+		width: 28%;
+	}
+	h2{
+		font-family: 'Croissant One', sans-serif;
+		font-size: 1.2em;
+		font-weight: 100;
+		margin:90px 0 90px 0;
+		background: -webkit-linear-gradient(315deg,$font-color-chic-entrees 0%,
+			 $font-color-chic-plats 60%, $font-color-chic-desserts 80%);
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+	h3{
+		font-size: 0.6em;
+		margin: 0;
+	}
+	p{
+		font-size: 0.5em;
+	}
+	.entrees{
+			color: $font-color-chic-entrees;
 		}
-		.submenu-title{
-			width: 40%;
-			text-align: center;
+		.plats{
+			color: $font-color-chic-plats;
 		}
-		svg{
-			width: 28%;
+		.desserts{
+			color: $font-color-chic-desserts;
 		}
-		h2{
-			font-family: 'Croissant One', sans-serif;
-			font-size: 1.2em;
-			font-weight: 100;
-			margin:90px 0 90px 0;
-			background: -webkit-linear-gradient(315deg,$font-color-chic-entrees 0%,
-				 $font-color-chic-plats 60%, $font-color-chic-desserts 80%);
-			-webkit-background-clip: text;
-			color: transparent;
-		}
-		h3{
-			font-size: 0.6em;
-			margin: 0;
-		}
-		p{
-			font-size: 0.5em;
-		}
-		.entrees{
-				color: $font-color-chic-entrees;
-			}
-			.plats{
-				color: $font-color-chic-plats;
-			}
-			.desserts{
-				color: $font-color-chic-desserts;
-			}
-		.title-bottom h2{
-			font-size: 0.9em;
-		}
+	.title-bottom h2{
+		font-size: 0.9em;
+	}
 }
 /* Responsive menu Le chic 750px *////////////////////////////////////////////////
 

@@ -12,9 +12,9 @@ body{
 			text-decoration: none;
 			color: $main-font-color;
 			&:hover{
-				 display: inline-block;
-					 animation: wiggle 120ms linear 6;
-				}
+			 display: inline-block;
+				 animation: wiggle 120ms linear 6;
+			}
 		}
 	}
 }

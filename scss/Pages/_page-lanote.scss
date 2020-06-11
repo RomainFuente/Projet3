@@ -6,42 +6,42 @@
 	font-family: 'Kalam', sans-serif;
 	color: $font-color-note;
 		
-		h2{
-			font-family: 'Devonshire',serif;
-			font-size: 1.8em;
-			font-weight: 100;
-		}
+	h2{
+		font-family: 'Devonshire',serif;
+		font-size: 1.8em;
+		font-weight: 100;
+	}
 
-		section {
-			.title{
-				width: 80%;
-			
-				.submenu-title{
-					width: 30%;
-					text-align: center;
-						h3{
-							font-size: 0.8em;
-							margin: 0;
-						}
-				}
-
-				svg{
-					width: 35%;
+	section {
+		.title{
+			width: 80%;
+		
+			.submenu-title{
+				width: 30%;
+				text-align: center;
+				h3{
+					font-size: 0.8em;
+					margin: 0;
 				}
 			}
-			
-			p{
-				font-size: 0.6em;
+
+			svg{
+				width: 35%;
 			}
-		}	
-
-		.title-bottom h2{
-			font-size: 1.5em;
 		}
-
-		.title-top h2{
-			margin-top: 0;
+		
+		p{
+			font-size: 0.6em;
 		}
+	}	
+
+	.title-bottom h2{
+		font-size: 1.5em;
+	}
+
+	.title-top h2{
+		margin-top: 0;
+	}
 }
 
 /* Responsive menu La note 750px *////////////////////////////////////////////////
